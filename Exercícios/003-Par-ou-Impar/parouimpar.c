@@ -1,18 +1,25 @@
 #include <stdio.h>
-    int main() {
-        int num;
 
-        // Solicita ao usuário que digite um número
-        printf("Digite um numero inteiro: ");
-        scanf("%d", &num);
+int main() {
+    int numero;
 
-        // Teste para saber se é par ou impar
-        if (num % 2 == 0) {
-            printf ("O numero %d eh PAR.\n", num);
-        } else {
-            printf("O numero %d eh IMPAR.\n", num);
+    do {
+        printf("Digite um número inteiro (0 para sair): ");
+        scanf("%d", &numero);
+
+        if (numero != 0) {
+            if (numero % 2 == 0) {
+                printf("O número %d é PAR.\n", numero);
+            } else {
+                printf("O número %d é ÍMPAR.\n", numero);
+            }
         }
-        
-        return 0;
-    }
+
+    } while (numero != 0);
+
+    printf("Programa encerrado.\n");
+
+    return 0;
+}
+
     
